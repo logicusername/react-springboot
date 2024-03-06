@@ -12,9 +12,11 @@ function PanelCategoria() {
 
   useEffect(() => {
     async function cargarDatos() {
-      const response = await fetch("https://springcp-405117.uc.r.appspot.com/products");
+      // const response = await fetch("https://springcp-405117.uc.r.appspot.com/products");
+      const response = await fetch('https://api-ecommercetr.onrender.com/products');
       const dats = await response.json();
       setDatosDos(dats);
+      // console.log(dats)
       
       if( cambio === "todos"){
         setDato(datosdos);
